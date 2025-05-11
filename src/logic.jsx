@@ -18,7 +18,7 @@ const ascii_values="@%#*+=-:. ";//from darker t0 lighter
                 const width=100;
                 const scale=100/img.width;
                 const height=Math.floor(img.height*scale*0.55);//image dherai lamo vara 0.55 le multiply garera height ghatako.
-                /* width lai 150 set garda jati shrink vaxa tei respect ma height set gaeko*/
+                /* width lai 100 set garda jati shrink vaxa tei respect ma height set gaeko*/
 
                 const canvas=canvas_ref.current; /* yo chai hidden canvas ho pixel data lina lai*/
                 canvas.height=height;
