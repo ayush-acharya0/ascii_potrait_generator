@@ -15,10 +15,10 @@ const ascii_values="@%#*+=-:. ";//from darker t0 lighter
             const img=new Image();
             img.onload=()=>{
                 // image resizing
-                const width=100;
-                const scale=100/img.width;
+                const width=80;
+                const scale=80/img.width;
                 const height=Math.floor(img.height*scale*0.55);//image dherai lamo vara 0.55 le multiply garera height ghatako.
-                /* width lai 100 set garda jati shrink vaxa tei respect ma height set gaeko*/
+                /* width lai 80 set garda jati shrink vaxa tei respect ma height set gaeko*/
 
                 const canvas=canvas_ref.current; /* yo chai hidden canvas ho pixel data lina lai*/
                 canvas.height=height;
@@ -74,7 +74,7 @@ const ascii_values="@%#*+=-:. ";//from darker t0 lighter
     <canvas ref={canvas_ref} className="hidden" />
 
     <div
-      className="bg-black p-4 rounded-md text-xs font-mono overflow-auto leading-none"
+      className="bg-black text-white p-4 rounded-md text-xs font-mono overflow-auto leading-none"
       dangerouslySetInnerHTML={{ __html: drawing || "Upload an image to generate ASCII art." }}
 
       /*in react the html strings are just displayed not rendered.so to render it dangerously set inner html is used.
