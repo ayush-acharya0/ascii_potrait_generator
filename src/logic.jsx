@@ -1,5 +1,6 @@
+
 import { useState,useRef } from "react";
-const ascii_values="@%#*+=-:. ";//from darker t0 lighter
+const ascii_values="$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,^`'. ";//from darker t0 lighter
 
  function Ascii_drawer(){
     const[drawing,setDrawing]=useState("");
@@ -65,7 +66,7 @@ const ascii_values="@%#*+=-:. ";//from darker t0 lighter
         type="file"
         accept="image/*"
         onChange={ImgGen}//STATE CHANGE VAYEMA
-        className="file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-blue-600 file:text-white hover:file:bg-blue-700 cursor-pointer"
+        className="file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-blue-600 file:text-white hover:file:bg-blue-700 hover:file:cursor-pointer"
       />
     </div>
     </div>
@@ -74,7 +75,7 @@ const ascii_values="@%#*+=-:. ";//from darker t0 lighter
     <canvas ref={canvas_ref} className="hidden" />
 
     <div
-      className="bg-black text-white p-4 rounded-md text-xs font-mono overflow-auto leading-none"
+      className="bg-black p-4 rounded-md text-xs font-mono overflow-auto leading-none"
       dangerouslySetInnerHTML={{ __html: drawing || "Upload an image to generate ASCII art." }}
 
       /*in react the html strings are just displayed not rendered.so to render it dangerously set inner html is used.
