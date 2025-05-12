@@ -57,7 +57,8 @@ const ascii_values="$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!l
 
     return(
         <>
-         <div className="p-6 max-w-3xl mx-auto">
+        
+         <div className="p-2 max-w-xl mx-auto ">
     <h1 className="text-2xl font-bold mb-4 text-center">ASCII Art Generator</h1>
 
     <div className="mb-4 flex flex-col items-center">
@@ -71,11 +72,11 @@ const ascii_values="$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!l
     </div>
     </div>
    
-
     <canvas ref={canvas_ref} className="hidden" />
 
+      <div className="h-full w-full flex justify-center">
     <div
-      className="bg-black p-4 rounded-md text-xs font-mono overflow-auto leading-none"
+      className="bg-black text-white text-center w-1/2 p-4 rounded-md text-xs font-mono overflow-auto leading-none"
       dangerouslySetInnerHTML={{ __html: drawing || "Upload an image to generate ASCII art." }}
 
       /*in react the html strings are just displayed not rendered.so to render it dangerously set inner html is used.
@@ -84,6 +85,7 @@ const ascii_values="$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!l
       it shows drawing if available but display the messge if not.*/
 
     />
+  </div>
   
         </>
     )
