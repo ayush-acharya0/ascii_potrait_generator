@@ -51,15 +51,12 @@ const ascii_values="$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!l
         }
         
         reader.readAsDataURL(file);// READ THE FILE AS A BASE X64 URL
-    }
- 
-    
-
+    }  
     return(
         <>
         
          <div className="p-2 max-w-xl mx-auto ">
-    <h1 className="text-2xl font-bold mb-4 text-center">ASCII Art Generator</h1>
+    <h1 className="text-2xl font-bold mb-4 text-center italic">ASCII Art Generator</h1>
 
     <div className="mb-4 flex flex-col items-center">
       <input
